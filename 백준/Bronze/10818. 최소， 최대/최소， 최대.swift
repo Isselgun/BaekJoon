@@ -1,6 +1,5 @@
 import Foundation
 
-var a = readLine()
-var b = readLine()!.split(separator: " ").map{Int($0)!}
-var f = b.min()
-print("\(b.min()!) \(b.max()!)")
+readLine()
+var b = readLine()!.split{$0==" "}.map{Int($0)!}
+print(b.min()!, b.max()!)
