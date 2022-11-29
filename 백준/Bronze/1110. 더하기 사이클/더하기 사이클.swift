@@ -1,16 +1,12 @@
 import Foundation
 
 var n = Int(readLine()!)!
-var originalValue = n
+var Value = n
 var count = 0
 
 repeat{
     count += 1
-    originalValue = sum(originalValue)
-}while n != originalValue
+    Value = Value % 10 * 10 + (Value / 10 + Value % 10) % 10
+}while n != Value
 
 print(count)
-
-func sum(_ num: Int) -> Int {
-    num % 10 * 10 + (num / 10 + num % 10) % 10
-}
